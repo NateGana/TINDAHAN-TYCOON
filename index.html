@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tindahan Tycoon</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div id="welcome" class="hidden">
+  <div class="hero"><div class="heroText"><h1>TINDAHAN TYCOON</h1><h3>Your Store. Your Rules. Your Business.</h3>
+  <p>Start small, serve your neighborhood, manage your products, and turn your little sari-sari store into a successful business!</p>
+  <div class="setup"><input id="sStore" placeholder="Store name" value="Aling Nena's Tindahan"><input id="sOwner" placeholder="Owner name"><input id="sLoc" placeholder="Neighborhood" value="Barangay Maligaya">
+  <select id="sTheme"><option>Classic Filipino Tindahan</option><option>Modern Neighborhood Store</option><option>Colorful Street Store</option><option>Premium Mini Grocery</option></select>
+  <p class="small">Starting capital: ₱10,000</p><button class="btn big" onclick="startGame()">START YOUR STORE</button></div></div>
+  <div class="heroImg"></div></div>
+</div>
+<div id="game" class="hidden">
+  <aside id="side"><div class="logo">🧺 Tindahan Tycoon</div><nav id="nav"></nav></aside>
+  <main><header><button class="btn sm" onclick="document.getElementById('side').classList.toggle('open')">☰</button>
+    <b id="hStore"></b><span id="hDay"></span><span id="hCash"></span><span class="bell" onclick="showNotifs()">🔔 <i id="hN">0</i></span></header>
+    <section id="view"></section></main>
+</div>
+<div id="modal" class="hidden"><div class="box" id="modalBox"></div></div><div id="toasts"></div>
+<script defer src="js/utilities.js"></script><script defer src="js/data.js"></script><script defer src="js/storage.js"></script>
+<script defer src="js/store.js"></script><script defer src="js/inventory.js"></script><script defer src="js/app.js"></script>
+</body></html>
